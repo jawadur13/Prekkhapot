@@ -269,7 +269,7 @@
         document.getElementById('menuBtn').onclick = () => mobileMenu.classList.toggle('hidden');
         let w = 25; setInterval(() => { w = (w + 7) % 101; bar.style.width = w + '%'; }, 700);
         const cheers = ['The crowd is roaring!', 'Lights on. Beat drops.', 'Another encore incoming!', 'Dhaka is singing tonight!'];
-        const cheerAudio = new Audio('https://orangefreesounds.com/wp-content/uploads/2022/08/Short-applause-sound-effect.mp3');
+        const cheerAudio = new Audio('https://cdn.pixabay.com/download/audio/2022/03/15/audio_4c8b1c3c56.mp3?filename=large-crowd-cheering-6283.mp3');
         document.getElementById('surprise').onclick = () => {
             msg.textContent = cheers[Math.floor(Math.random() * cheers.length)];
             cheerAudio.currentTime = 0;
