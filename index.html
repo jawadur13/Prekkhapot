@@ -44,19 +44,17 @@
         }
 
         #creditsModal {
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: opacity 0.3s ease, transform 0.3s ease;
         }
 
         #creditsModal.hidden {
             display: none;
             opacity: 0;
-            transform: scale(0.95);
         }
 
         #creditsModal.flex {
             display: flex;
             opacity: 1;
-            transform: scale(1);
         }
     </style>
 </head>
@@ -399,7 +397,7 @@
                 document.body.classList.add('modal-active');
             } else {
                 modal.classList.remove('flex');
-                setTimeout(() => modal.classList.add('hidden'), 400);
+                modal.classList.add('hidden');
                 document.body.classList.remove('modal-active');
             }
         }
