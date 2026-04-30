@@ -93,12 +93,25 @@
                 </div>
             </div>
             <div class="glass rounded-3xl overflow-hidden shadow-2xl shadow-red-500/10">
-                <div class="aspect-video w-full">
-                    <video class="w-full h-full object-cover" controls autoplay muted loop playsinline>
+                <div class="aspect-video w-full relative group">
+                    <video id="heroVideo" class="w-full h-full object-cover" autoplay muted loop playsinline controls>
                         <source src="component/Song_Video/Iccher Rong. Album- The Mid Way (মধ্যবর্তী পথ).mp4"
                             type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
+                    <!-- Mute Toggle Overlay -->
+                    <button onclick="toggleMute()"
+                        class="absolute bottom-4 right-4 p-2.5 bg-black/50 backdrop-blur-md border border-white/20 rounded-full text-white hover:bg-red-600 transition duration-300 z-10 flex items-center justify-center">
+                        <svg id="muteIcon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728" id="soundWaves"
+                                class="hidden" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                            <path id="muteX" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
+                        </svg>
+                    </button>
                 </div>
                 <div class="p-8">
                     <div class="flex justify-between items-start">
@@ -415,6 +428,21 @@
     <script>
         document.getElementById('menuBtn').onclick = () => mobileMenu.classList.toggle('hidden');
         let w = 25; setInterval(() => { w = (w + 7) % 101; bar.style.width = w + '%'; }, 700);
+
+        function toggleMute() {
+            const video = document.getElementById('heroVideo');
+            const soundWaves = document.getElementById('soundWaves');
+            const muteX = document.getElementById('muteX');
+            video.muted = !video.muted;
+
+            if (video.muted) {
+                soundWaves.classList.add('hidden');
+                muteX.classList.remove('hidden');
+            } else {
+                soundWaves.classList.remove('hidden');
+                muteX.classList.add('hidden');
+            }
+        }
 
         function toggleModal(show) {
             const modal = document.getElementById('creditsModal');
