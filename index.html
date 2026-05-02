@@ -56,6 +56,28 @@
             display: flex;
             opacity: 1;
         }
+
+        /* Temporary Image Cloak */
+        .member-card-img {
+            opacity: 0; /* Change to 1 to show real images again */
+            transition: opacity 0.5s ease;
+        }
+
+        .member-placeholder {
+            background: linear-gradient(to top, #18181b, #27272a);
+            position: relative;
+        }
+
+        .member-placeholder::after {
+            content: '👤';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 5rem;
+            opacity: 0.2;
+            filter: grayscale(1);
+        }
     </style>
 </head>
 
@@ -196,9 +218,9 @@
             <!-- 1: Nobin Mia -->
             <div
                 class="min-w-[280px] md:min-w-0 snap-center glass rounded-[2.5rem] overflow-hidden group border border-white/5 hover:border-red-500/50 transition duration-500">
-                <div class="relative h-[420px] overflow-hidden">
+                <div class="relative h-[420px] overflow-hidden member-placeholder">
                     <img src="component/images/member/Nobin_Mia_Vocalist_and_Lyricist.jpeg" alt="Nobin Mia"
-                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition duration-700">
+                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition duration-700 member-card-img">
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/20 to-transparent opacity-90 group-hover:opacity-60 transition duration-500">
                     </div>
@@ -213,9 +235,9 @@
             <!-- 2: S.m Shahan -->
             <div
                 class="min-w-[280px] md:min-w-0 snap-center glass rounded-[2.5rem] overflow-hidden group border border-white/5 hover:border-red-500/50 transition duration-500">
-                <div class="relative h-[420px] overflow-hidden">
+                <div class="relative h-[420px] overflow-hidden member-placeholder">
                     <img src="component/images/member/S.m_Shahan_Mentor.jpeg" alt="S.m Shahan"
-                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition duration-700">
+                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition duration-700 member-card-img">
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/20 to-transparent opacity-90 group-hover:opacity-60 transition duration-500">
                     </div>
@@ -229,9 +251,9 @@
             <!-- 3: Mir Faisal -->
             <div
                 class="min-w-[280px] md:min-w-0 snap-center glass rounded-[2.5rem] overflow-hidden group border border-white/5 hover:border-red-500/50 transition duration-500">
-                <div class="relative h-[420px] overflow-hidden">
+                <div class="relative h-[420px] overflow-hidden member-placeholder">
                     <img src="component/images/member/Mir_Faisal_Band_Manager_and_Content_creator.jpeg" alt="Mir Faisal"
-                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition duration-700">
+                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition duration-700 member-card-img">
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/20 to-transparent opacity-90 group-hover:opacity-60 transition duration-500">
                     </div>
@@ -246,9 +268,9 @@
             <!-- 3: Kayes Shuvo -->
             <div
                 class="min-w-[280px] md:min-w-0 snap-center glass rounded-[2.5rem] overflow-hidden group border border-white/5 hover:border-red-500/50 transition duration-500">
-                <div class="relative h-[420px] overflow-hidden">
+                <div class="relative h-[420px] overflow-hidden member-placeholder">
                     <img src="component/images/member/Kayes_Shuvo_Lead_guitarist_2.jpeg" alt="Kayes Shuvo"
-                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition duration-700">
+                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition duration-700 member-card-img">
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/20 to-transparent opacity-90 group-hover:opacity-60 transition duration-500">
                     </div>
@@ -262,9 +284,9 @@
             <!-- 4: Joy Sheikh -->
             <div
                 class="min-w-[280px] md:min-w-0 snap-center glass rounded-[2.5rem] overflow-hidden group border border-white/5 hover:border-red-500/50 transition duration-500">
-                <div class="relative h-[420px] overflow-hidden">
+                <div class="relative h-[420px] overflow-hidden member-placeholder">
                     <img src="component/images/member/Joy_Sheikh_Lead_guitarist_1.jpeg" alt="Joy Sheikh"
-                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition duration-700">
+                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition duration-700 member-card-img">
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/20 to-transparent opacity-90 group-hover:opacity-60 transition duration-500">
                     </div>
@@ -278,10 +300,10 @@
             <!-- 5: Muhammad Bin Labib -->
             <div
                 class="min-w-[280px] md:min-w-0 snap-center glass rounded-[2.5rem] overflow-hidden group border border-white/5 hover:border-red-500/50 transition duration-500">
-                <div class="relative h-[420px] overflow-hidden">
+                <div class="relative h-[420px] overflow-hidden member-placeholder">
                     <img src="component/images/member/Muhammad_Bin_Labib_Rhythm_guitarist.jpeg"
                         alt="Muhammad Bin Labib"
-                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition duration-700">
+                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition duration-700 member-card-img">
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/20 to-transparent opacity-90 group-hover:opacity-60 transition duration-500">
                     </div>
@@ -296,9 +318,9 @@
             <!-- 6: Md Sojib -->
             <div
                 class="min-w-[280px] md:min-w-0 snap-center glass rounded-[2.5rem] overflow-hidden group border border-white/5 hover:border-red-500/50 transition duration-500">
-                <div class="relative h-[420px] overflow-hidden">
+                <div class="relative h-[420px] overflow-hidden member-placeholder">
                     <img src="component/images/member/Md_Sojib_Bass_Guitarist.jpeg" alt="Md Sojib"
-                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition duration-700">
+                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition duration-700 member-card-img">
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/20 to-transparent opacity-90 group-hover:opacity-60 transition duration-500">
                     </div>
@@ -314,9 +336,9 @@
             <!-- 8: Frank Broto -->
             <div
                 class="min-w-[280px] md:min-w-0 snap-center glass rounded-[2.5rem] overflow-hidden group border border-white/5 hover:border-red-500/50 transition duration-500">
-                <div class="relative h-[420px] overflow-hidden">
+                <div class="relative h-[420px] overflow-hidden member-placeholder">
                     <img src="component/images/member/Frank_Broto_Drummer.jpg" alt="Frank Broto"
-                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition duration-700">
+                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition duration-700 member-card-img">
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/20 to-transparent opacity-90 group-hover:opacity-60 transition duration-500">
                     </div>
@@ -330,9 +352,9 @@
             <!-- 9: Abu Musa Kazem -->
             <div
                 class="min-w-[280px] md:min-w-0 snap-center glass rounded-[2.5rem] overflow-hidden group border border-white/5 hover:border-red-500/50 transition duration-500">
-                <div class="relative h-[420px] overflow-hidden">
+                <div class="relative h-[420px] overflow-hidden member-placeholder">
                     <img src="component/images/member/Abu_Musa_Kazem_Social_Activists.jpg" alt="Abu Musa Kazem"
-                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition duration-700">
+                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition duration-700 member-card-img">
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/20 to-transparent opacity-90 group-hover:opacity-60 transition duration-500">
                     </div>
